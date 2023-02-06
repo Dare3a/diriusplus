@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dirius Plus</title>
-  </head>
-  <body>
-    <div>
-      <h1>Test</h1>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Dirius Plus</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="row py-2">
+      <div class="col-2">
+        <div class="d-flex">
+          <picture>
+            <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.webp"
+                    type="image/webp">
+            <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.jpg"
+                    type="image/jpg">
+
+            <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.webp"
+                    type="image/webp">
+            <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.jpg"
+                    type="image/jpg">
+
+            <img src="./images/logo/transparent-logo.jpg"
+                 alt="Advokatska kancelarija Branislava Krnic navbar">
+          </picture>
+        </div>
+      </div>
+
+      <ul class="col-10 nav d-flex justify-content-between align-items-center">
+        <li><a href="">Početna</a></li>
+        <li><a href="">Oprema za markete</a></li>
+        <li><a href="">Magacinske police</a></li>
+        <li><a href="">Dodatna oprema</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Kontakt</a></li>
+      </ul>
     </div>
-  </body>
+  </div>
+</header>
+</body>
 </html>
