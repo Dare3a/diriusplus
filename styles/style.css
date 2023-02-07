@@ -5154,3 +5154,24 @@ ul.nav {
   /*padding-bottom: 1.25rem;*/
   /*text-align: center;*/
 }
+.logo-bg {
+  background-color: #0083c1;
+}
+.oblak {
+  font-size: 16px;
+  color: white;
+  padding: 2px 8px;
+  background-color: #383e42;
+  border-radius: 50px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
+  text-decoration: none;
+}
+
+.oblak:hover {
+  color: white;
+  padding: 2px 8px;
+  background-color: limegreen;
+  border-radius: 50px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
+  text-decoration: none;
+}

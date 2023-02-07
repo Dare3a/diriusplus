@@ -1,70 +1,168 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8"/>
-  <title>Dirius Plus</title>
-  <link href="styles/style.css" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <title>Dirius Plus</title>
+    <link href="styles/style.css" rel="stylesheet"/>
 </head>
 <body>
 <header>
-  <div class="container">
-    <div class="row py-2">
-      <div class="col-2">
-        <div class="d-flex">
-          <picture>
-            <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.webp"
-                    type="image/webp">
-            <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.jpg"
-                    type="image/jpg">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-2">
+                <div class="d-flex">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.webp"
+                                type="image/webp">
+                        <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.jpg"
+                                type="image/jpg">
 
-            <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.webp"
-                    type="image/webp">
-            <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.jpg"
-                    type="image/jpg">
+                        <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.webp"
+                                type="image/webp">
+                        <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.jpg"
+                                type="image/jpg">
 
-            <img class="img-fluid" src="./images/logo/transparent-logo.jpg"
-                 alt="dirius-plus-logo">
-          </picture>
+                        <img class="img-fluid" src="./images/logo/transparent-logo.jpg"
+                             alt="dirius-plus-logo">
+                    </picture>
+                </div>
+            </div>
+
+            <ul class="col-10 nav d-flex justify-content-between align-items-center">
+                <li><a href="">Početna</a></li>
+                <li><a href="">Oprema za markete</a></li>
+                <li><a href="">Magacinske police</a></li>
+                <li><a href="">Dodatna oprema</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
         </div>
-      </div>
-
-      <ul class="col-10 nav d-flex justify-content-between align-items-center">
-        <li><a href="">Početna</a></li>
-        <li><a href="">Oprema za markete</a></li>
-        <li><a href="">Magacinske police</a></li>
-        <li><a href="">Dodatna oprema</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Kontakt</a></li>
-      </ul>
     </div>
-  </div>
 </header>
 <main>
-  <section>
-    <div class="hero-div">
-      <picture>
-        <source media="(min-width: 934px)" srcset="images/dirius-hero.webp"
-                type="image/webp">
-        <source media="(min-width: 934px)" srcset="images/dirius-hero.jpg"
-                type="image/jpg">
-        <source media="(min-width: 501px)" srcset="images/dirius-hero_tab.webp"
-                type="image/webp">
-        <source media="(min-width: 501px)" srcset="images/dirius-hero_tab.jpg"
-                type="image/jpg">
-        <source media="(max-width: 500px)" srcset="images/dirius-hero_mob.webp"
-                type="image/webp">
-        <source media="(max-width: 500px)" srcset="images/dirius-hero_mob.jpg"
-                type="image/jpg">
+    <section>
+        <div class="hero-div">
+            <picture>
+                <source media="(min-width: 934px)" srcset="images/dirius-hero.webp"
+                        type="image/webp">
+                <source media="(min-width: 934px)" srcset="images/dirius-hero.jpg"
+                        type="image/jpg">
+                <source media="(min-width: 501px)" srcset="images/dirius-hero_tab.webp"
+                        type="image/webp">
+                <source media="(min-width: 501px)" srcset="images/dirius-hero_tab.jpg"
+                        type="image/jpg">
+                <source media="(max-width: 500px)" srcset="images/dirius-hero_mob.webp"
+                        type="image/webp">
+                <source media="(max-width: 500px)" srcset="images/dirius-hero_mob.jpg"
+                        type="image/jpg">
 
-        <img class="d-block img-fluid hero-img" src="images/dirius-hero.jpg"
-             alt="Dirius hero" width="1920" height="930">
-      </picture>
-      <div class="d-flex flex-column hero-pozadina justify-content-center">
-        <h1 class="hero-cap text-center p-1">Oprema za markete i magacine</h1>
-        <p class="hero-p text-center p-2">Dirius plus Beograd</p>
-      </div>
-    </div>
-  </section>
+                <img class="d-block img-fluid hero-img" src="images/dirius-hero.jpg"
+                     alt="Dirius hero" width="1920" height="930">
+            </picture>
+            <div class="d-flex flex-column hero-pozadina justify-content-center">
+                <h1 class="hero-cap text-center p-1">Oprema za markete i magacine</h1>
+                <p class="hero-p text-center p-2">Dirius plus Beograd</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-agency py-5" id="o-nama">
+        <div class="container-fluid  row py-5 px-0 mx-0">
+            <h2 class="d-flex grey-color justify-content-center">
+                O nama
+            </h2>
+            <div class="col-xl-6 d-flex flex-wrap align-content-center px-3 px-lg-4 py-2 py-lg-5">
+                <p class="text-lg-end text-start pt-5 ps-lg-4 break-column">Diris plus doo je preduzeće koje se bavi
+                    projektovanjem i opremanjem maloprodajnih i veleprodajnih objekata za trgovine, fabričke i
+                    distributivne
+                    magacine sa policama, rafovima i paletnim sistemima.</p>
+                <p class="text-lg-end text-start ps-lg-4">Potvrda kvaliteta opreme i poslovnosti na prostoru Srbije
+                    potvrđuje se i prisutnošću asortimana i opremanje preko 1800 objekata od kojih neke možete videti u
+                    našoj
+                    galeriji. Projektni tim preduzeća Dirius Plus izlazi u susret specijalnim zahtevima kupaca. Veliku
+                    prednost pored kvaliteta su i uslovi plaćanja na više mesečnih rata. Veliki lager nam omogućava da
+                    poručenu robu isporučujemo bez čekanja.</p>
+                <!--                <p class="ms-auto align-self-end pt-5 green-text"> (... <a-->
+                <!--                        href="#">read more</a>) </p>-->
+            </div>
+            <div class="col-xl-6 d-flex flex-wrap align-content-center justify-content-center pt-5 px-0 order-1 order-md-2">
+                <picture>
+                    <source media="(min-width: 551px)" srcset="images/supermarket.webp"
+                            type="image/webp">
+                    <source media="(min-width: 551px)" srcset="images/supermarket.jpg"
+                            type="image/jpg">
+
+                    <source media="(max-width: 550px)" srcset="images/supermarket-mob.webp"
+                            type="image/webp">
+                    <source media="(max-width: 550px)" srcset="images/supermarket-mob.jpg"
+                            type="image/jpg">
+
+                    <img class="img-fluid" src="images/supermarket.jpg"
+                         alt="o nama" width="1000" height="746">
+                </picture>
+            </div>
+        </div>
+        <div class="logo-bg d-flex flex-column flex-wrap justify-content-center py-4">
+            <div class="d-flex flex-wrap justify-content-center pb-2">
+                <a href="#">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.webp"
+                                type="image/webp">
+                        <source media="(min-width: 1000px)" srcset="./images/logo/transparent-logo.jpg"
+                                type="image/jpg">
+
+                        <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.webp"
+                                type="image/webp">
+                        <source media="(min-width: 320px)" srcset="./images/logo/transparent-logo.jpg"
+                                type="image/jpg">
+
+                        <img class="img-fluid" src="./images/logo/transparent-logo.jpg"
+                             alt="dirius-plus-logo">
+                    </picture>
+                </a>
+            </div>
+            <div class="text-center text-md-right font-weight-bold pb-3"><a
+                    href="tel:+381112085572" data-title="Telefon"
+                    class="py-1 px-2 oblak">
+                <span>&#9990;</span> 011 208 55 72</a>
+            </div>
+        </div>
+        <div class="container-fluid py-5 row px-0  ms-0">
+            <div class="col-xl-6 d-flex flex-wrap align-content-center justify-content-center px-0 order-2">
+                <picture>
+                    <source media="(min-width: 551px)" srcset="images/supermarket.webp"
+                            type="image/webp">
+                    <source media="(min-width: 551px)" srcset="images/supermarket.jpg"
+                            type="image/jpg">
+
+                    <source media="(max-width: 550px)" srcset="images/supermarket-mob.webp"
+                            type="image/webp">
+                    <source media="(max-width: 550px)" srcset="images/supermarket-mob.jpg"
+                            type="image/jpg">
+
+                    <img class="img-fluid" src="images/supermarket.jpg"
+                         alt="o nama" width="1000" height="746">
+                </picture>
+            </div>
+            <div
+                    class="col-xl-6 order-xl-2 d-flex flex-wrap align-content-center justify-content-lg-start justify-content-center border-bottom-gold text-dec-none px-3 px-lg-4">
+                <h2 class="grey-color pt-3 font-24">
+                    Oprema za markete
+                </h2>
+                <p class="text-left pt-5 pe-lg-4 break-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi sit amet felis nec felis pulvinar placerat. Nam vitae eros id risus mollis aliquet. Nunc at
+                    pharetra purus, non feugiat nunc. In ut sapien neque. Nulla facilisi. In ac tempus dui. Nulla eget
+                    gravida magna.
+                    Praesent dignissim laoreet massa in porttitor. Suspendisse nec fringilla justo. Donec vel tellus
+                    consequat, rhoncus erat sed, elementum ex. Nullam commodo imperdiet elit, quis ornare purus laoreet
+                    pretium. Suspendisse luctus dolor enim.</p>
+                <p class="text-left pe-lg-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id felis
+                    accumsan, porta ligula a, vehicula arcu. Mauris sed ligula dolor. Nulla quis ornare urna. Maecenas
+                    vulputate tortor quam, quis luctus lorem sollicitudin at. Etiam auctor justo tempor ullamcorper
+                    rutrum. Phasellus massa purus, scelerisque et leo vel, malesuada facilisis sapien.
+                </p>
+            </div>
+        </div>
+    </section>
 </main>
 </body>
 </html>
