@@ -5082,6 +5082,9 @@
 }
 
 /*# sourceMappingURL=bootstrap-grid.css.map */
+* {
+  color: white;
+}
 
 body {
   margin: 0;
@@ -5124,7 +5127,7 @@ ul.nav {
   position: absolute;
   bottom: 0;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(56, 62, 66, 0.6); /* Blue background with 0.5 opacity */
+  background: rgba(56, 62, 66, 0.5); /* Blue background with 0.5 opacity */
   color: #f1f1f1;
   width: 100%;
   height: 100%;
@@ -5155,13 +5158,13 @@ ul.nav {
   /*text-align: center;*/
 }
 .logo-bg {
-  background-color: #0083c1;
+  background-color: #A5ACB1;
 }
 .oblak {
   font-size: 16px;
   color: white;
   padding: 2px 8px;
-  background-color: #383e42;
+  background-color: limegreen;
   border-radius: 50px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
   text-decoration: none;
@@ -5170,8 +5173,11 @@ ul.nav {
 .oblak:hover {
   color: white;
   padding: 2px 8px;
-  background-color: limegreen;
+  background-color: #28a428;
   border-radius: 50px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
   text-decoration: none;
+}
+main {
+  background-color: #383e42;
 }
