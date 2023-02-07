@@ -5090,7 +5090,7 @@ body {
 header {
   background: #FFF;
   color: #000;
-  box-shadow: 4px 4px 4px 4px rgb(0 0 0 / 30%);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.50);
   width: 100%;
 }
 
@@ -5115,4 +5115,42 @@ ul.nav {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+.hero-div {
+  position: relative;
+}
+
+.hero-pozadina {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(56, 62, 66, 0.6); /* Blue background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-cap {
+  /*position: absolute;*/
+  /*right: 15%;*/
+  /*top: 15%;*/
+  /*transform: translateY(-15%);*/
+  /*left: 15%;*/
+  /*padding-top: 1.25rem;*/
+  /*padding-bottom: 1.25rem;*/
+  color: #fff;
+  /*text-align: center;*/
+}
+
+.hero-p {
+  color: #fff;
+  /*font-size: 18px;*/
+  /*position: absolute;*/
+  /*right: 15%;*/
+  /*top: 30%;*/
+  /*transform: translateY(-30%);*/
+  /*left: 15%;*/
+  /*padding-top: 1.25rem;*/
+  /*padding-bottom: 1.25rem;*/
+  /*text-align: center;*/
 }
