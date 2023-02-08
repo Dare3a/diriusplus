@@ -5164,7 +5164,7 @@ ul.nav {
   font-size: 16px;
   color: white;
   padding: 2px 8px;
-  background-color: limegreen;
+  background-color: #328D87;
   border-radius: 50px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
   text-decoration: none;
@@ -5173,7 +5173,7 @@ ul.nav {
 .oblak:hover {
   color: white;
   padding: 2px 8px;
-  background-color: #28a428;
+  background-color: #55B68B;
   border-radius: 50px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
   text-decoration: none;
@@ -5196,7 +5196,7 @@ main {
     box-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px, rgba(0, 0, 0, 0.22) 0 5px 5px;
 }
 .card-pozadina:hover {
-    outline:1px solid #F9F871;
+    outline:1px solid white;
 }
 .card-pozadina p {
    font-size: 22px;
@@ -5209,4 +5209,7 @@ main {
 }
 .img-radius {
     border-radius: 0 50px;
+}
+.gold-color {
+  color: rgb(178, 157, 95);
 }
