@@ -5203,9 +5203,9 @@ main {
 .border-radius-15 {
     border-radius: 15px;
 }
-/*.card img:hover {*/
-/*    border: 2px solid #F9F871;*/
-/*}*/
 .card-link:hover {
     color: #F9F871;
+}
+.img-radius {
+    border-radius: 0 50px;
 }
