@@ -5208,17 +5208,23 @@ main {
     color: #F9F871;
 }
 .img-radius {
-    border-radius: 10px 50px;
+    border-radius: 15px 50px;
 }
 .gold-color {
   color: rgb(178, 157, 95);
 }
-.proces .card {
+.usluge .card-usluge {
   background-color: #A5ACB1;
   border-bottom: 2px solid #37646D;
   box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px, rgba(0, 0, 0, 0.22) 0 4px 4px;
 }
 
-.proces .card h2 {
+.usluge .card-usluge h2 {
   color: #37646D;
+}
+.card-usluge {
+  border-radius: 15px;
+}
+.color-grey {
+  color: #383e42;
 }
