@@ -5218,7 +5218,9 @@ main {
   border-bottom: 2px solid #37646D;
   box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px, rgba(0, 0, 0, 0.22) 0 4px 4px;
 }
-
+.card-usluge:hover {
+  background-color: #e4e6e7;
+}
 .usluge .card-usluge h2 {
   color: #37646D;
 }
