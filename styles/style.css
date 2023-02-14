@@ -5545,30 +5545,6 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
   /*background-color: #a8dadc;*/
   color: #4d4d4d;
 }
-.kontakt input, .kontakt textarea {
-  background-color: #e1e5f2 !important;
-  /*border-radius: 0 !important;*/
-  /*box-shadow: 8px 8px 6px 0 rgb(0 0 0 0.50);*/
-}
-.kontakt .form-control:focus {
-  border-color: #c9d1e8 !important;
-  -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
-}
-.send-button .send-dugme {
-  border-radius: 15px;
-  color: white !important;
-  background-color: #457b9d !important;
-  /*border: #fed9b7 1px solid !important;*/
-}
-.send-button .send-dugme:hover {
-  background-color: #36617c !important;
-}
-.send-button .form-control:focus {
-  /*border-color: #009199 !important;*/
-  -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
-}
 .form-control {
   display: block;
   width: 100%;
@@ -5579,13 +5555,60 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #c8ccd0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.kontakt input, .kontakt textarea {
+  background-color: #c8ccd0 !important;
+  /*border-radius: 0 !important;*/
+  /*box-shadow: 8px 8px 6px 0 rgb(0 0 0 0.50);*/
+}
+.kontakt .form-control:focus {
+  border-color: white !important;
+  -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.kontakt .form-control:focus-visible {
+  outline: none;
+}
+.send-button .send-dugme {
+  border-radius: 15px;
+  color: white;
+  background-color: #328D87;
+  /*border: #fed9b7 1px solid !important;*/
+}
+.send-button .send-dugme:hover {
+  background-color: #55B68B;
+}
+.send-button .form-control:focus {
+  /*border-color: #009199 !important;*/
+  -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
 label {
   display: inline-block;
+}
+.toast {
+  width: 350px;
+  max-width: 100%;
+  font-size: .875rem;
+  pointer-events: auto;
+  background-color: rgba(255,255,255,.85);
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: 0 0.5rem 1rem rgba(0 0 0 0.15);
+  border-radius: 0.25rem;
+}
+.toast:not(.show) {
+  display: none;
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+.fade {
+  transition: opacity .15s linear;
 }
