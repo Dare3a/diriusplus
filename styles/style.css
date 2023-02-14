@@ -5519,7 +5519,7 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
 }
 .kontakt-podatci {
   color: white;
-  background-color: rgba(55, 100, 109, 0.7);
+  /*background-color: rgba(55, 100, 109, 0.7);*/
   border-radius: 10px;
 }
 .kontakt-podatci a, .text-link a {
@@ -5541,6 +5541,10 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.transbox {
+  background-color: rgba(55, 100, 109, 0.8);
+    /*opacity: 0.8;*/
 }
 .pod-nav {
   /*background-image: linear-gradient(to right, #ff8095, #dc89d0, #909eee, #27ace2, #00afb9);*/
