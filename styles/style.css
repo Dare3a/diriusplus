@@ -5532,6 +5532,10 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
   color: #a8dadc;
   text-decoration: underline;
 }
+.list-unstyled {
+  /*padding-left: 0;*/
+  list-style: none;
+}
 .pozadina {
   background-image: url(../images/kontakt-pozadina.webp);
   background-repeat: no-repeat;
