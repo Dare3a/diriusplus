@@ -92,25 +92,22 @@
                         <form action="kontakt.php" data-form-title="Kontakt" id="form-contact"
                               method="post" target="votar">
                             <input data-form-email="true" type="hidden">
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <label for="name"></label>
-                                    <input class="form-control" data-form-field="Name" id="name"
-                                           name="name"
-                                           placeholder="Ime" required="" type="text">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="surname"></label>
-                                    <input class="form-control" data-form-field="surname"
-                                           id="surname"
-                                           name="surname" placeholder="Prezime" required=""
-                                           type="text">
-                                </div>
+                            <div class="form-group">
+                                <label for="name"></label>
+                                <input class="form-control" data-form-field="name" id="name"
+                                       name="name" required=""
+                                       placeholder="Ime" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="company"></label>
+                                <input class="form-control" data-form-field="company" id="company"
+                                       name="company"
+                                       placeholder="Kompanija" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="email"></label>
                                 <input class="form-control" data-form-field="Email" id="email"
-                                       name="email"
+                                       name="email" required=""
                                        placeholder="Email" type="email">
                             </div>
                             <div class="form-group"><label for="telefon"></label>
