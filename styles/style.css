@@ -5091,9 +5091,11 @@
 @media (min-width: 768px) {
     .bottom-menu {
         position: fixed;
-        right: -7%;
-        top: 40%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 10%;
+        /*opacity: 0.9;*/
     }
 
     .bottom-menu-card {
