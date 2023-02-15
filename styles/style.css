@@ -5650,3 +5650,16 @@ label {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px, rgba(0, 0, 0, 0.22) 0 4px 4px;
 }
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.bottom-menu-card {
+  background-color: #37646D;
+  border: 1px solid white;
+  padding: 5px;
+}
+.bottom-menu-card:hover {
+    background-color: #328D87;
+}
