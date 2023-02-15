@@ -5365,7 +5365,7 @@ footer.light .footer-copyright {
 }
 
 .widget.widget-last {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .widget.no-box {
@@ -5645,4 +5645,8 @@ label {
 
 .right {
     float: right;
+}
+.map {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px, rgba(0, 0, 0, 0.22) 0 4px 4px;
 }
