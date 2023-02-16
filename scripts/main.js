@@ -1,7 +1,7 @@
 "use strict";
 
-// // Toast za poslatu poruku u kontakt formi
-// // namesteno je na click zbog testa na lokalu u produkciji promeniti na submit
+// Toast za poslatu poruku u kontakt formi
+// namesteno je na click zbog testa na lokalu u produkciji promeniti na submit
 // $(document).ready(function () {
 //     $("#form-contact, #form-contact-modal").submit(function () {
 //         $(".toast").toast({delay: 1200});
@@ -10,15 +10,20 @@
 //     });
 // });
 //
-// // Reset kontakt forme i modal kontakt forme
-// function resetForm() {
-//     setTimeout(() => {
-//         $("#form-contact")[0].reset();
-//         $("#form-contact-modal")[0].reset();
-//     }, 1000);
-//
-//     console.log("resetovao sam formu");
-// }
+
+
+// Reset kontakt forme i modal kontakt forme
+const kontaktForma = document.querySelector("#form-contact")
+const kontaktFormaBtn = document.querySelector('.send-dugme')
+if (kontaktForma) {
+    kontaktFormaBtn.addEventListener('click', resetForm)
+}
+
+function resetForm() {
+    setTimeout(() => {
+        kontaktForma.reset();
+    }, 1000);
+}
 
 
 // Otvaranje i zatvaranje hamburgera
