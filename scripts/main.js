@@ -12,6 +12,7 @@
 //
 
 // Toast za poslatu poruku u kontakt formi
+// TODO promeniti click event u produkciji na submit
 const toastMsg = document.querySelector('.toast')
 
 function toast() {
