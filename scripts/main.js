@@ -11,11 +11,23 @@
 // });
 //
 
+// Toast za poslatu poruku u kontakt formi
+const toastMsg = document.querySelector('.toast')
+
+function toast() {
+    console.log('pokrenut toast')
+    toastMsg.classList.replace('hide', 'show')
+    setTimeout(() => {
+        toastMsg.classList.replace('show', 'hide')
+
+    }, 1200);
+}
 
 // Reset kontakt forme i modal kontakt forme
 const kontaktForma = document.querySelector("#form-contact")
 const kontaktFormaBtn = document.querySelector('.send-dugme')
 if (kontaktForma) {
+    kontaktFormaBtn.addEventListener('click', toast)
     kontaktFormaBtn.addEventListener('click', resetForm)
 }
 
