@@ -21,15 +21,18 @@
 // }
 
 
-// Otvaranje i
+// Otvaranje i zatvaranje hamburgera
+const hamburgerImg = document.querySelector('#hamburgerImg');
 const hamburger = document.querySelector('#hamburger');
 const nav = document.querySelector('#nav');
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         if (nav.classList.contains('flex-column')) {
             nav.classList.replace('flex-column', 'd-none')
+            hamburgerImg.src = 'images/icons/hamburger.png'
         } else {
-            nav.classList.replace('d-none', 'flex-column')
+            nav.classList.replace('d-none', 'flex-column');
+            hamburgerImg.src = 'images/icons/close.png'
         }
     })
 }
