@@ -36,3 +36,19 @@ if (hamburger) {
         }
     })
 }
+
+// Otvaranje i zatvaranje podmenija u navigaciji za mobilni
+const padajuciMeni = document.querySelectorAll('#opremaMarketiStrelica, #magacinskePoliceStrelica, #dodatnaOpremaStrelica');
+const padajuciMeniLista = document.querySelectorAll('#opremaMarketiMenu, #magacinskePoliceMenu, #dodatnaOpremaMenu');
+if (padajuciMeni) {
+    padajuciMeni.forEach(item => {
+        item.addEventListener('click', (evt) => {
+            const index = Array.prototype.indexOf.call(padajuciMeni, item)
+            if (padajuciMeniLista[index].classList.contains('show-nav-menu')) {
+                padajuciMeniLista[index].classList.remove('show-nav-menu')
+            } else {
+                padajuciMeniLista[index].classList.add('show-nav-menu');
+            }
+        })
+    })
+}
