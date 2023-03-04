@@ -5771,3 +5771,22 @@ label {
 #hamburger img {
     cursor: pointer;
 }
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+    border: 1px solid rgba(0,0,0,.15);
+}
+.dropdown-item {
+    display: block;
+    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.25rem 1rem;
+}
+.dropdown-item:hover {
+    background-color: #4D545E !important;
+    color: white !important;
+}
