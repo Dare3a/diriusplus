@@ -5772,7 +5772,7 @@ label {
     cursor: pointer;
 }
 .dropdown-menu {
-    position: absolute;
+    position: relative;
     display: none;
     background-clip: padding-box;
     box-sizing: border-box;
