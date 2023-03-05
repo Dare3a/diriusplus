@@ -5176,7 +5176,7 @@ body {
 }
 
 header {
-    background: #FFF;
+    background-color: #e4e6e7;
     color: #000;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.50);
     width: 100%;
@@ -5772,6 +5772,7 @@ label {
     cursor: pointer;
 }
 .dropdown-menu {
+    background-color: #e4e6e7 !important;
     position: relative;
     display: none;
     background-clip: padding-box;
