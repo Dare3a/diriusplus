@@ -5791,3 +5791,10 @@ label {
     background-color: #4D545E !important;
     color: white !important;
 }
+.podfooter-link {
+    text-decoration: none;
+    color: #CAF7FF;
+}
+.podfooter-link:hover {
+    text-decoration: underline;
+}

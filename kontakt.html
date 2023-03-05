@@ -27,60 +27,72 @@
                                 srcset="./images/logo/transparent-logo.webp"
                                 type="image/webp">
                         <source media="(min-width: 1000px)"
-                                srcset="./images/logo/transparent-logo.jpg"
+                                srcset="./images/logo/transparent-logo.png"
                                 type="image/jpg">
 
                         <source media="(min-width: 320px)"
                                 srcset="./images/logo/transparent-logo.webp"
                                 type="image/webp">
                         <source media="(min-width: 320px)"
-                                srcset="./images/logo/transparent-logo.jpg"
+                                srcset="./images/logo/transparent-logo.png"
                                 type="image/jpg">
 
-                        <img class="img-fluid" src="./images/logo/transparent-logo.jpg"
+                        <img class="img-fluid" src="./images/logo/transparent-logo.png"
                              alt="dirius-plus-logo">
                     </picture>
                 </div>
             </div>
-
-            <ul class="col-10 nav d-md-flex justify-content-between align-items-center d-none">
-                <li><a href="">Početna</a></li>
+            <div id="hamburger"
+                 class="col-3 d-md-none d-flex align-self-center justify-content-center ms-auto">
+                <img id="hamburgerImg"
+                     class="img-fluid"
+                     src="images/icons/hamburger.png"
+                     alt="hamburger"></div>
+            <ul id="nav"
+                class="col-md-10 col-12 nav d-md-flex justify-content-between align-items-center flex-md-row d-none">
+                <li><a href="index.html">Početna</a></li>
                 <li>
-                    <a href="">Oprema za markete</a>
-                    <ul>
-                        <li><a href="">Police za markete</a></li>
-                        <li><a href="">Korpe za markete</a></li>
-                        <li><a href="">Kolica za markete</a></li>
-                        <li><a href="">Kasa pultovi</a></li>
+                    <a href="#">Oprema za markete</a><span class="color-grey" id="opremaMarketiStrelica"> &#9660;</span>
+                    <!--                    <img id="opremaMarketiStrelica"-->
+                    <!--                         alt="chevron-down"-->
+                    <!--                         src="images/icons/chevron-down.png"/>-->
+                    <ul id="opremaMarketiMenu" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">Police za markete</a></li>
+                        <li><a class="dropdown-item" href="">Korpe za markete</a></li>
+                        <li><a class="dropdown-item" href="">Kolica za markete</a></li>
+                        <li><a class="dropdown-item" href="">Kasa pultovi</a></li>
                     </ul>
                 </li>
-                <li><a href="">Magacinske police</a>
-                    <ul>
-                        <li><a href="">Paletni regali</a></li>
-                        <li><a href="">Plični regali</a></li>
+                <li><a href="#">Magacinske police</a><span class="color-grey"
+                                                           id="magacinskePoliceStrelica"> &#9660;</span>
+                    <!--                    <img id="magacinskePoliceStrelica"-->
+                    <!--                         alt="chevron-down"-->
+                    <!--                         src="images/icons/chevron-down.png"/>-->
+                    <ul id="magacinskePoliceMenu" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">Paletni regali</a></li>
+                        <li><a class="dropdown-item" href="">Polični regali</a></li>
 
                     </ul>
                 </li>
-                <li><a href="">Dodatna oprema</a>
-                    <ul>
-                        <li><a href="">Automatski ulaz</a></li>
-                        <li><a href="">Mehanički ulaz</a></li>
-                        <li><a href="">Barijerna ograda</a></li>
-                        <li><a href="">Gravitacione posude za rinfuz</a></li>
-                        <li><a href="">Posuda sa lopaticom</a></li>
-                        <li><a href="">Stalak sa ramom</a></li>
-                        <li><a href="">Ramovi A3 i A4</a></li>
+                <li><a href="#">Dodatna oprema</a><span class="color-grey"
+                                                        id="dodatnaOpremaStrelica"> &#9660;</span>
+                    <!--                    <img id="dodatnaOpremaStrelica"-->
+                    <!--                         alt="chevron-down"-->
+                    <!--                         src="images/icons/chevron-down.png"/>-->
+                    <ul id="dodatnaOpremaMenu" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">Automatski ulaz</a></li>
+                        <li><a class="dropdown-item" href="">Mehanički ulaz</a></li>
+                        <li><a class="dropdown-item" href="">Barijerna ograda</a></li>
+                        <li><a class="dropdown-item" href="">Gravitacione posude za rinfuz</a></li>
+                        <li><a class="dropdown-item" href="">Posuda sa lopaticom</a></li>
+                        <li><a class="dropdown-item" href="">Stalak sa ramom</a></li>
+                        <li><a class="dropdown-item" href="">Ramovi A3 i A4</a></li>
 
                     </ul>
                 </li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Kontakt</a></li>
+                <!--                <li><a href="">Blog</a></li>-->
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
-            <div class="col-3 d-md-none d-flex align-self-center justify-content-center  ms-auto">
-                <img
-                        class="img-fluid"
-                        src="images/icons/hamburger.png"
-                        alt="hamburger"></div>
 
 
         </div>
@@ -322,7 +334,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-center">
-                    <p class="px-5">Copyright ProXlance &copy; 2023. All rights reserved.</p>
+                    <p class="px-5">Sva prava zadržava: <a class="podfooter-link" href="index.html">Dirius Plus</a>
+                        &copy; 2023. Izrada: ProXlance
+                    </p>
                 </div>
             </div>
         </div>
