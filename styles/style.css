@@ -5221,7 +5221,7 @@ ul.nav {
     top: 40%;
     transform: translateY(-40%);
     background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(55, 100, 109, 0.7); /* Green background with 0.5 opacity */
+    background: rgba(56, 62, 66, 0.7); /* Green background with 0.5 opacity */
     color: #f1f1f1;
     width: 100%;
     height: auto;
