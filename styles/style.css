@@ -5289,8 +5289,9 @@ main {
     background: rgba(50, 141, 135, 0.6); /* Green background with 0.5 opacity */
     color: #f1f1f1;
     width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    /*height: 100%;*/
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px, rgba(0, 0, 0, 0.22) 0 5px 5px;
 }
 
@@ -5300,6 +5301,7 @@ main {
 
 .card-pozadina p {
     font-size: 22px;
+    margin: 10px 0;
 }
 
 .border-radius-15 {
