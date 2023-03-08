@@ -5218,8 +5218,8 @@ ul.nav {
 
 .hero-pozadina {
     position: absolute;
-    top: 50%;
-    transform: translateY(-15%);
+    top: 40%;
+    transform: translateY(-40%);
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(55, 100, 109, 0.7); /* Green background with 0.5 opacity */
     color: #f1f1f1;
