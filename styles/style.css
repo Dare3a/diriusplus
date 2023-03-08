@@ -5295,9 +5295,9 @@ main {
     box-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px, rgba(0, 0, 0, 0.22) 0 5px 5px;
 }
 
-.card-pozadina:hover {
-    outline: 1px solid white;
-}
+/*.card-pozadina:hover {*/
+/*    outline: 1px solid white;*/
+/*}*/
 
 .card-pozadina p {
     font-size: 22px;
