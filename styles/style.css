@@ -5087,6 +5087,7 @@
 
 * {
     font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.4px;
 }
 @media (min-width: 576px) {
 
@@ -5820,6 +5821,9 @@ label {
     .card-align {
         flex-direction: row;
     }
+}
+.letter-spacing {
+    letter-spacing: 0.5px;
 }
 
 
