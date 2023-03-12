@@ -5825,5 +5825,14 @@ label {
 .letter-spacing {
     letter-spacing: 0.5px;
 }
-
+.sidebar-linkovi {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #4D545E;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px, rgba(0, 0, 0, 0.22) 0 5px 5px;
+}
+.lista-linkova {
+    padding-left: 20px;
+}
 
