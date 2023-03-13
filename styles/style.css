@@ -5133,7 +5133,11 @@
 @media (min-width: 992px) {
 
 }
-
+@media (max-width: 992px) {
+    .sidebar-kontakt {
+        display: none;
+    }
+}
 @media (min-width: 1200px) {
 
 }
@@ -5178,6 +5182,9 @@
 
 body {
     margin: 0;
+}
+.font-18 {
+    font-size: 18px;
 }
 .font-22 {
     font-size: 22px;
