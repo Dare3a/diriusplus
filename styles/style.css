@@ -5179,7 +5179,9 @@
 body {
     margin: 0;
 }
-
+.font-22 {
+    font-size: 22px;
+}
 header {
     background-color: #e4e6e7;
     color: #000;
@@ -5331,8 +5333,9 @@ main {
     background-color: #e4e6e7;
 }
 
-.usluge .card-usluge h2 {
+.usluge .card-title {
     color: #37646D;
+    font-weight: bold;
 }
 
 .card-usluge {
