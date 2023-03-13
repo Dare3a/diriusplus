@@ -5845,4 +5845,10 @@ label {
 .lista-linkova {
     padding-left: 20px;
 }
-
+.aktivno > a {
+    color: #328D87 !important;
+}
+.aktivno-lista > a {
+    background-color: #4D545E !important;
+    color: white !important;
+}
