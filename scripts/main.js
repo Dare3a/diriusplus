@@ -78,6 +78,7 @@ const slides = document.querySelectorAll(".slide");
 // loop through slides and set each slides translateX
 slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
+
 });
 
 // select next slide button
@@ -90,6 +91,7 @@ let maxSlide;
 window.onresize = changeMaxSlides;
 
 changeMaxSlides();
+
 
 // Ako se u slideru prikazuje jedna slika, ovde staviti length -1, ako se prikazuje vise slika, staviti - broj slika koji se prikazuje
 function changeMaxSlides() {
@@ -116,6 +118,16 @@ nextSlide.addEventListener("click", function () {
     });
 });
 
+//Auto slide slider
+function autoNextSlide() {
+    nextSlide.click();
+
+    setTimeout(autoNextSlide, 3000)
+}
+
+autoNextSlide();
+
+
 // select next slide button
 const prevSlide = document.querySelector(".btn-prev");
 
@@ -133,3 +145,5 @@ prevSlide.addEventListener("click", function () {
         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
 });
+
+
