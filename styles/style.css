@@ -5931,3 +5931,21 @@ label {
     top: 30%;
     right: 2%;
 }
+
+.specifikacija-dugme {
+    display: inline-flex;
+    border-radius: 5px;
+    color: white;
+    background-color: #328D87;
+}
+.specifikacija-dugme:hover {
+    background-color: #55B68B;
+}
+.specifikacija-dugme:focus {
+    -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.specifikacija-dugme a {
+    text-decoration: none;
+    padding: 5px;
+}
