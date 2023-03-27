@@ -5155,6 +5155,10 @@
         width: 100%;
     }
 
+    .slide-artikli {
+        width: 100%;
+    }
+
     .bottom-menu {
         position: sticky;
         bottom: 0;
@@ -5853,6 +5857,10 @@ label {
         width: 25%;
     }
 
+    .slide-artikli {
+        width: 33.33%;
+    }
+
     .card-align {
         flex-direction: row;
     }
@@ -5894,9 +5902,25 @@ label {
     border-radius: 15px;
 }
 
+.slider-artikli {
+    width: 100%;
+    max-width: 1200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden; /* <===  */
+    border-radius: 15px;
+}
+
 .slide {
     max-width: 1200px;
     height: 90px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide-artikli {
+    max-width: 1200px;
+    height: 200px;
     position: absolute;
     transition: all 0.5s;
 }
@@ -5935,19 +5959,32 @@ label {
     right: 2%;
 }
 
+.btn-prev-artikli {
+    top: 40%;
+    left: 2%;
+}
+
+.btn-next-artikli {
+    top: 40%;
+    right: 2%;
+}
+
 .specifikacija-dugme {
     display: inline-flex;
     border-radius: 5px;
     color: white;
     background-color: #328D87;
 }
+
 .specifikacija-dugme:hover {
     background-color: #55B68B;
 }
+
 .specifikacija-dugme:focus {
     -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
+
 .specifikacija-dugme a {
     text-decoration: none;
     padding: 5px;

@@ -73,7 +73,7 @@ if (padajuciMeni) {
 
 // Slider
 // Select all slides
-const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide-artikli, .slide");
 
 // loop through slides and set each slides translateX
 slides.forEach((slide, indx) => {
@@ -82,7 +82,7 @@ slides.forEach((slide, indx) => {
 });
 
 // select next slide button
-const nextSlide = document.querySelector(".btn-next");
+const nextSlide = document.querySelector(".btn-next, .btn-next-artikli");
 
 // current slide counter
 let curSlide = 0;
@@ -95,10 +95,16 @@ changeMaxSlides();
 
 // Ako se u slideru prikazuje jedna slika, ovde staviti length -1, ako se prikazuje vise slika, staviti - broj slika koji se prikazuje
 function changeMaxSlides() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768 && slides[0].classList.contains('slide')) {
         maxSlide = slides.length - 4;
-    } else {
+
+    }
+    if (window.innerWidth > 768 && slides[0].classList.contains('slide-artikli')) {
+        maxSlide = slides.length - 3;
+
+    } else if (window.innerWidth <= 768) {
         maxSlide = slides.length - 1;
+
     }
 
 }
@@ -129,7 +135,7 @@ autoNextSlide();
 
 
 // select next slide button
-const prevSlide = document.querySelector(".btn-prev");
+const prevSlide = document.querySelector(".btn-prev, .btn-prev-artikli");
 
 // add event listener and navigation functionality
 prevSlide.addEventListener("click", function () {
