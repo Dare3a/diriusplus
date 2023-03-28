@@ -5973,11 +5973,11 @@ label {
     display: inline-flex;
     border-radius: 5px;
     color: white;
-    background-color: #328D87;
+    background-color: #ba0d32;
 }
 
 .specifikacija-dugme:hover {
-    background-color: #55B68B;
+    background-color: #d70f3a;
 }
 
 .specifikacija-dugme:focus {
