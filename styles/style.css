@@ -5858,7 +5858,7 @@ label {
     }
 
     .slide-artikli {
-        width: 33.33%;
+        width: 50%;
     }
 
     .card-align {
@@ -5905,7 +5905,7 @@ label {
 .slider-artikli {
     width: 100%;
     max-width: 1200px;
-    height: 200px;
+    height: 300px;
     position: relative;
     overflow: hidden; /* <===  */
     border-radius: 15px;
@@ -5920,7 +5920,7 @@ label {
 
 .slide-artikli {
     max-width: 1200px;
-    height: 200px;
+    height: 300px;
     position: absolute;
     transition: all 0.5s;
 }
