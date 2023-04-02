@@ -131,7 +131,7 @@ function autoNextSlide() {
     setTimeout(autoNextSlide, 3000)
 }
 
-autoNextSlide();
+setTimeout(autoNextSlide, 3000)
 
 
 // select next slide button
