@@ -28,8 +28,8 @@ function toast() {
 const kontaktForma = document.querySelector("#form-contact")
 const kontaktFormaBtn = document.querySelector('.send-dugme')
 if (kontaktForma) {
-    kontaktFormaBtn.addEventListener('click', toast)
-    kontaktFormaBtn.addEventListener('click', resetForm)
+    kontaktFormaBtn.addEventListener('submit', toast)
+    kontaktFormaBtn.addEventListener('submit', resetForm)
 }
 
 function resetForm() {
