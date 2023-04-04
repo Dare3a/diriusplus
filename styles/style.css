@@ -119,6 +119,18 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .slider {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1281px) {
+    .slider {
+        max-width: 1200px;
+    }
+}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -5899,7 +5911,6 @@ label {
 
 .slider {
     width: 100%;
-    max-width: 1200px;
     height: 90px;
     position: relative;
     overflow: hidden; /* <===  */
