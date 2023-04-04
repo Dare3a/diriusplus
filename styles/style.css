@@ -5958,6 +5958,7 @@ label {
     cursor: pointer;
     background-color: #383e42;
     font-size: 18px;
+    line-height: 18px;
 }
 
 /*.btn-slider:active {*/
