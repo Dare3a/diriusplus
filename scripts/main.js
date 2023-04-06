@@ -74,20 +74,24 @@ if (padajuciMeni) {
 // Slider
 // Select all slides
 const slides = document.querySelectorAll(".slide-artikli, .slide");
-
+const slidesModal = document.querySelectorAll(".slide-md")
 // loop through slides and set each slides translateX
 slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
-
+})
+slidesModal.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
 // select next slide button
-const nextSlide = document.querySelector(".btn-next, .btn-next-artikli");
+const nextSlide = document.querySelectorAll(".btn-next, .btn-next-artikli, .btn-next-md");
 
 // current slide counter
 let curSlide = 0;
+let curSlideModal = 0;
 // maximum number of slides
 let maxSlide;
+let maxSlideModal;
 window.onresize = changeMaxSlides;
 
 changeMaxSlides();
@@ -97,36 +101,57 @@ changeMaxSlides();
 function changeMaxSlides() {
     if (window.innerWidth > 768 && slides[0].classList.contains('slide')) {
         maxSlide = slides.length - 4;
-
+    }
+    if (slidesModal.length > 0) {
+        if (window.innerWidth > 768 && slidesModal[0].classList.contains('slide-md')) {
+            maxSlideModal = slidesModal.length - 1;
+        }
     }
     if (window.innerWidth > 768 && slides[0].classList.contains('slide-artikli')) {
         maxSlide = slides.length - 3;
 
     } else if (window.innerWidth <= 768) {
         maxSlide = slides.length - 1;
+        maxSlideModal = slidesModal.length - 1;
 
     }
 
 }
 
 // add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-    // check if current slide is the last and reset current slide
-    if (curSlide === maxSlide) {
-        curSlide = 0;
-    } else {
-        curSlide++;
-    }
+nextSlide.forEach(button => {
+    button.addEventListener("click", function () {
+        // check if current slide is the last and reset current slide
+        if (curSlide === maxSlide) {
+            curSlide = 0;
+        }
+        if (curSlideModal === maxSlideModal) {
+            curSlideModal = 0;
+        } else {
+            curSlide++;
+            curSlideModal++;
+        }
 
-    //   move slide by -100%
-    slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        //   move slide by -100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+        slidesModal.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+        });
     });
-});
+})
 
 //Auto slide slider
 function autoNextSlide() {
-    nextSlide.click();
+    nextSlide.forEach(slide => {
+        if (slide.classList.contains('btn-next-md')) {
+            slide.click()
+        }
+        if (slide.classList.contains('btn-next')) {
+            slide.click()
+        }
+    });
 
     setTimeout(autoNextSlide, 3000)
 }
@@ -135,21 +160,30 @@ setTimeout(autoNextSlide, 3000)
 
 
 // select next slide button
-const prevSlide = document.querySelector(".btn-prev, .btn-prev-artikli");
+const prevSlide = document.querySelectorAll(".btn-prev, .btn-prev-artikli, .btn-prev-md");
 
 // add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-    // check if current slide is the first and reset current slide to last
-    if (curSlide === 0) {
-        curSlide = maxSlide;
-    } else {
-        curSlide--;
-    }
+prevSlide.forEach(button => {
+    button.addEventListener("click", function () {
+        // check if current slide is the first and reset current slide to last
+        if (curSlide === 0) {
+            curSlide = maxSlide;
+        }
+        if (curSlideModal === 0) {
+            curSlideModal = maxSlideModal;
+        } else {
+            curSlide--;
+            curSlideModal--;
+        }
 
-    //   move slide by 100%
-    slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        //   move slide by 100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+        slidesModal.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+        });
     });
-});
+})
 
 
