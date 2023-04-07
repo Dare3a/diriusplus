@@ -75,6 +75,7 @@ if (padajuciMeni) {
 // Select all slides
 const slides = document.querySelectorAll(".slide-artikli, .slide");
 const slidesModal = document.querySelectorAll(".slide-md")
+const modal = document.querySelector('.md-modal')
 // loop through slides and set each slides translateX
 slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
@@ -123,13 +124,17 @@ nextSlide.forEach(button => {
     button.addEventListener("click", function () {
         // check if current slide is the last and reset current slide
         if (curSlide === maxSlide) {
+            console.log('curSlide 0')
             curSlide = 0;
         }
         if (curSlideModal === maxSlideModal) {
+            console.log('curSlideModal 0')
             curSlideModal = 0;
+        } else if (button.classList.contains('btn-next-md')) {
+            curSlideModal++;
         } else {
             curSlide++;
-            curSlideModal++;
+
         }
 
         //   move slide by -100%
@@ -145,7 +150,7 @@ nextSlide.forEach(button => {
 //Auto slide slider
 function autoNextSlide() {
     nextSlide.forEach(slide => {
-        if (slide.classList.contains('btn-next-md')) {
+        if (slide.classList.contains('btn-next-artikli')) {
             slide.click()
         }
         if (slide.classList.contains('btn-next')) {
@@ -153,11 +158,21 @@ function autoNextSlide() {
         }
     });
 
-    setTimeout(autoNextSlide, 3000)
+    isModal()
 }
 
-setTimeout(autoNextSlide, 3000)
+function isModal() {
+    if (modal) {
+        if (!modal.classList.contains('md-show')) {
+            console.log('if');
+            setTimeout(autoNextSlide, 3000)
+        }
+    } else if (!modal) {
+        setTimeout(autoNextSlide, 3000)
+    }
+}
 
+isModal();
 
 // select next slide button
 const prevSlide = document.querySelectorAll(".btn-prev, .btn-prev-artikli, .btn-prev-md");
@@ -185,5 +200,21 @@ prevSlide.forEach(button => {
         });
     });
 })
+
+// OTVARANJE MODALA
+if (slides[0].classList.contains('slide-artikli')) {
+    const slidesArray = Array.prototype.slice.call(slides)
+    slides.forEach(slide => {
+        slide.addEventListener('click', () => {
+
+            modal.classList.add('md-show')
+            curSlideModal = slidesArray.indexOf(slide)
+            slidesModal.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+            });
+            isModal()
+        })
+    })
+}
 
 
