@@ -126,15 +126,13 @@ nextSlide.forEach(button => {
         if (curSlide === maxSlide) {
             console.log('curSlide 0')
             curSlide = 0;
+        } else {
+            curSlide++;
         }
         if (curSlideModal === maxSlideModal) {
-            console.log('curSlideModal 0')
             curSlideModal = 0;
         } else if (button.classList.contains('btn-next-md')) {
             curSlideModal++;
-        } else {
-            curSlide++;
-
         }
 
         //   move slide by -100%
