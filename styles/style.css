@@ -5214,7 +5214,7 @@
 
 @media (min-width: 769px) {
     .slide-md {
-        max-width: 1200px;
+        max-width: 2400px;
         width: 100%;
         position: absolute;
         transition: all 0.5s;
@@ -5947,7 +5947,7 @@ label {
 
 .slider-md {
     width: 100%;
-    max-width: 1200px;
+    max-width: 2400px;
     height: 80vh;
     position: relative;
     /*overflow: hidden; !* <===  *!*/
@@ -5966,10 +5966,11 @@ label {
     height: 300px;
     position: absolute;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .slide-md {
-    max-width: 1200px;
+    max-width: 2400px;
     width: 100%;
     position: absolute;
     transition: all 0.5s;
@@ -5995,6 +5996,22 @@ label {
     background-color: #383e42;
     font-size: 18px;
     line-height: 18px;
+}
+
+.btn-slider-md {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    padding: 10px;
+    border: none;
+    /*border-radius: 50%;*/
+    /*z-index: 10;*/
+    cursor: pointer;
+    background-color: #383e42;
+    font-size: 24px;
+    line-height: 24px;
+    top: 0;
+    right: 0;
 }
 
 /*.btn-slider:active {*/
@@ -6102,7 +6119,7 @@ label {
 .md-modal {
     margin: auto;
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
     right: 0;
     height: 100%;
@@ -6119,6 +6136,7 @@ label {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+    height: 100vh;
 }
 
 .md-effect-12 .md-content, .md-effect-12 .md-content h3 {
@@ -6135,4 +6153,23 @@ label {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .btn-slider-md {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        padding: 10px;
+        border: none;
+        /*border-radius: 50%;*/
+        /*z-index: 10;*/
+        cursor: pointer;
+        background-color: #383e42;
+        font-size: 16px;
+        line-height: 16px;
+        top: 0;
+        right: 0;
+    }
 }

@@ -215,4 +215,10 @@ if (slides[0].classList.contains('slide-artikli')) {
     })
 }
 
+// ZATVARANJE MODALA
+const modalCloseBtn = document.querySelector('.close-btn-md');
+modalCloseBtn.addEventListener('click', () => {
+    modal.classList.remove('md-show')
+});
+
 
