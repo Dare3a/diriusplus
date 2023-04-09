@@ -12,7 +12,6 @@
 //
 
 // Toast za poslatu poruku u kontakt formi
-// TODO promeniti click event u produkciji na submit
 const toastMsg = document.querySelector('.toast')
 
 function toast() {
@@ -60,7 +59,7 @@ const padajuciMeni = document.querySelectorAll('#opremaMarketiStrelica, #magacin
 const padajuciMeniLista = document.querySelectorAll('#opremaMarketiMenu, #magacinskePoliceMenu, #dodatnaOpremaMenu');
 if (padajuciMeni) {
     padajuciMeni.forEach(item => {
-        item.addEventListener('click', (evt) => {
+        item.addEventListener('click', () => {
             const index = Array.prototype.indexOf.call(padajuciMeni, item)
             if (padajuciMeniLista[index].classList.contains('show-nav-menu')) {
                 padajuciMeniLista[index].classList.remove('show-nav-menu')
@@ -109,7 +108,7 @@ function changeMaxSlides() {
         }
     }
     if (window.innerWidth > 768 && slides[0].classList.contains('slide-artikli')) {
-        maxSlide = slides.length - 3;
+        maxSlide = slides.length - 2;
 
     } else if (window.innerWidth <= 768) {
         maxSlide = slides.length - 1;
@@ -219,6 +218,7 @@ if (slides[0].classList.contains('slide-artikli')) {
 const modalCloseBtn = document.querySelector('.close-btn-md');
 modalCloseBtn.addEventListener('click', () => {
     modal.classList.remove('md-show')
+    isModal();
 });
 
 
