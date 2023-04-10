@@ -7,7 +7,7 @@ if (isset($_POST["submit"])) {
     $message = $_POST['message'];
 
 
-    $to = 'darko.ilic83@gmail.com';
+    $to = 'office@diriusplus.com';
     $subject = 'Contact form';
     $body = "Ime: $name\r\n\nKompanija: $company\n\nE-mail: $email\n\nTelefon: $telefon\n\nPoruka: $message";
 
