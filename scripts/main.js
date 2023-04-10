@@ -99,22 +99,26 @@ changeMaxSlides();
 
 // Ako se u slideru prikazuje jedna slika, ovde staviti length -1, ako se prikazuje vise slika, staviti - broj slika koji se prikazuje
 function changeMaxSlides() {
-    if (window.innerWidth > 768 && slides[0].classList.contains('slide')) {
-        maxSlide = slides.length - 4;
-    }
-    if (slidesModal.length > 0) {
-        if (window.innerWidth > 768 && slidesModal[0].classList.contains('slide-md')) {
+    if (slides.length > 0) {
+        console.log('usao u changeMaxSlides');
+        if (window.innerWidth > 768 && slides[0].classList.contains('slide')) {
+            maxSlide = slides.length - 4;
+        }
+        if (slidesModal.length > 0) {
+            if (window.innerWidth > 768 && slidesModal[0].classList.contains('slide-md')) {
+                maxSlideModal = slidesModal.length - 1;
+            }
+        }
+        if (window.innerWidth > 768 && slides[0].classList.contains('slide-artikli')) {
+            maxSlide = slides.length - 2;
+
+        } else if (window.innerWidth <= 768) {
+            maxSlide = slides.length - 1;
             maxSlideModal = slidesModal.length - 1;
+
         }
     }
-    if (window.innerWidth > 768 && slides[0].classList.contains('slide-artikli')) {
-        maxSlide = slides.length - 2;
 
-    } else if (window.innerWidth <= 768) {
-        maxSlide = slides.length - 1;
-        maxSlideModal = slidesModal.length - 1;
-
-    }
 
 }
 
@@ -199,19 +203,21 @@ prevSlide.forEach(button => {
 })
 
 // OTVARANJE MODALA
-if (slides[0].classList.contains('slide-artikli')) {
-    const slidesArray = Array.prototype.slice.call(slides)
-    slides.forEach(slide => {
-        slide.addEventListener('click', () => {
+if (slides.length > 0) {
+    if (slides[0].classList.contains('slide-artikli')) {
+        const slidesArray = Array.prototype.slice.call(slides)
+        slides.forEach(slide => {
+            slide.addEventListener('click', () => {
 
-            modal.classList.add('md-show')
-            curSlideModal = slidesArray.indexOf(slide)
-            slidesModal.forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
-            });
-            isModal()
+                modal.classList.add('md-show')
+                curSlideModal = slidesArray.indexOf(slide)
+                slidesModal.forEach((slide, indx) => {
+                    slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+                });
+                isModal()
+            })
         })
-    })
+    }
 }
 
 // ZATVARANJE MODALA
