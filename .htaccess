@@ -27,7 +27,7 @@ Header set Cache-Control "max-age=31536000, public"
     SetOutputFilter DEFLATE
 </FilesMatch>
 
-ErrorDocument 404 /404.html
+
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} www.diriusplus.com
