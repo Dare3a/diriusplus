@@ -27,7 +27,7 @@ Header set Cache-Control "max-age=31536000, public"
     SetOutputFilter DEFLATE
 </FilesMatch>
 
-ErrorDocument 404 /404.html
+
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} www.diriusplus.com
@@ -37,7 +37,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{THE_REQUEST} /index\.html? [NC]
 RewriteRule ^(.*/)?index\.html?$ /$1 [R=301,L]
-RewriteRule ^https://diriusplus.com/proizvodi/police-za-markete$ - [L,NC,G]
+
 
 RedirectPermanent https://diriusplus.com/index.html https://diriusplus.com
 
