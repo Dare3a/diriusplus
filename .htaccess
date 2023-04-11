@@ -41,7 +41,7 @@ RewriteRule ^(.*/)?index\.html?$ /$1 [R=301,L]
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-RewriteRule ^https://diriusplus.com/proizvodi/police-za-markete\.html$ - [L,NC,G]
+RewriteRule .*/proizvodi/.* - [G]
 
 </IfModule>
 
