@@ -28,7 +28,6 @@ Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>
 
 ErrorDocument 404 /404.html
-ErrorDocument 410 /404.html
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} www.diriusplus.com
