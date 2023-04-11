@@ -25,9 +25,9 @@ Header set Cache-Control "max-age=31536000, public"
 
 <FilesMatch "\.(html?|txt|css|js|php|pl)$">
     SetOutputFilter DEFLATE
- </FilesMatch>
+</FilesMatch>
 
- ErrorDocument 404 /404.html
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} www.diriusplus.com
@@ -39,3 +39,5 @@ RewriteCond %{THE_REQUEST} /index\.html? [NC]
 RewriteRule ^(.*/)?index\.html?$ /$1 [R=301,L]
 
 RedirectPermanent https://diriusplus.com/index.html https://diriusplus.com
+
+Redirect gone https://diriusplus.com/proizvodi/police-za-markete
