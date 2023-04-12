@@ -38,13 +38,6 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{THE_REQUEST} /index\.html? [NC]
 RewriteRule ^(.*/)?index\.html?$ /$1 [R=301,L]
 
-<IfModule mod_rewrite.c>
-RewriteEngine On
-
-RewriteRule proizvodi/.* - [G]
-
-</IfModule>
-
 
 RedirectPermanent https://diriusplus.com/index.html https://diriusplus.com
 
