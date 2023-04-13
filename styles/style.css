@@ -5322,7 +5322,7 @@ ul.nav {
     font-size: 16px;
     color: white;
     padding: 2px 8px;
-    background-color: #328D87;
+    background-color: #37646D;
     border-radius: 50px;
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
     text-decoration: none;
@@ -5331,7 +5331,7 @@ ul.nav {
 .oblak:hover {
     color: white;
     padding: 2px 8px;
-    background-color: #55B68B;
+    background-color: #328D87;
     border-radius: 50px;
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.50);
     text-decoration: none;
@@ -5920,7 +5920,7 @@ label {
 }
 
 .aktivno > a {
-    color: #328D87 !important;
+    color: #37646D !important;
 }
 
 .aktivno-lista > a {
