@@ -238,12 +238,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         window.scrollTo({top: 0, left: 0, behavior: "smooth"});
     });
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY < 200) {
-            button.style.opacity = "0";
-        } else {
-            button.style.opacity = "1";
-        }
-    });
+    // window.addEventListener('scroll', function () {
+    //     if (window.scrollY < 200) {
+    //         button.style.opacity = "0";
+    //     } else {
+    //         button.style.opacity = "1";
+    //     }
+    // });
 
 });
