@@ -5183,9 +5183,6 @@
         padding: 5px;
     }
 
-    .bottom-menu-card:hover {
-        background-color: #328D87;
-    }
 
     .show-nav-menu {
         display: block !important;
@@ -6175,15 +6172,15 @@ label {
     }
 }
 
-.scroll-top {
-    background: black;
-    border: none;
-    padding: 2rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
-    transition: all ease 0.5s;
-    opacity: 0;
-    color: #fff200;
-}
+/*.scroll-top {*/
+/*    background: black;*/
+/*    border: none;*/
+/*    padding: 2rem;*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    cursor: pointer;*/
+/*    transition: all ease 0.5s;*/
+/*    opacity: 0;*/
+/*    color: #fff200;*/
+/*}*/
