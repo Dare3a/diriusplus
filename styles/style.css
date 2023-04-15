@@ -5711,7 +5711,25 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
     /*background-color: rgba(55, 100, 109, 0.7);*/
     border-radius: 10px;
 }
+.text-link {
+    color: #a8dadc;
+    text-decoration: none;
+}
 
+.text-link:hover {
+    text-decoration: underline;
+    color: #a8dadc;
+}
+
+.text-link-dark {
+    color: #193438;
+    text-decoration: underline;
+}
+
+.text-link-dark:hover {
+    text-decoration: underline;
+    color: #193438;
+}
 .kontakt-podatci a, .text-link a {
     color: #a8dadc;
     text-decoration: none;
