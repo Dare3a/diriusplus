@@ -5711,6 +5711,7 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
     /*background-color: rgba(55, 100, 109, 0.7);*/
     border-radius: 10px;
 }
+
 .text-link {
     color: #a8dadc;
     text-decoration: none;
@@ -5730,6 +5731,7 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
     text-decoration: underline;
     color: #193438;
 }
+
 .kontakt-podatci a, .text-link a {
     color: #a8dadc;
     text-decoration: none;
@@ -5769,7 +5771,8 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
