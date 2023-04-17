@@ -43,13 +43,17 @@ const hamburgerImg = document.querySelector('#hamburgerImg');
 const hamburger = document.querySelector('#hamburger');
 const nav = document.querySelector('#nav');
 if (hamburger) {
+    console.log(hamburgerImg);
     hamburger.addEventListener('click', () => {
         if (nav.classList.contains('flex-column')) {
             nav.classList.replace('flex-column', 'd-none')
-            hamburgerImg.src = 'images/icons/hamburger.png'
+            hamburgerImg.classList.replace('hamburgerX', 'hamburgerHam')
+            hamburgerImg.innerHTML = '&equiv;'
         } else {
-            nav.classList.replace('d-none', 'flex-column');
-            hamburgerImg.src = 'images/icons/close.png'
+            nav.classList.replace('' +
+                'd-none', 'flex-column');
+            hamburgerImg.classList.replace('hamburgerHam', 'hamburgerX')
+            hamburgerImg.innerHTML = 'X'
         }
     })
 }

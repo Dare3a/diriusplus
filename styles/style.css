@@ -5869,7 +5869,7 @@ label {
     box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px, rgba(0, 0, 0, 0.22) 0 4px 4px;
 }
 
-#hamburger img {
+#hamburger span {
     cursor: pointer;
 }
 
@@ -6205,3 +6205,18 @@ label {
 /*    opacity: 0;*/
 /*    color: #fff200;*/
 /*}*/
+
+
+#hamburgerImg.hamburgerHam {
+    font-size: 32px;
+    line-height: 32px;
+    color: black;
+}
+
+#hamburgerImg.hamburgerX {
+    font-size: 26px;
+    line-height: 26px;
+    color: black;
+}
+
+
