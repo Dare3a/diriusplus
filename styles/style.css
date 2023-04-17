@@ -5999,8 +5999,8 @@ label {
 
 .slide img, .slide-artikli img, .slide-md img {
     max-width: 95%;
-    /*height: auto;*/
-    /*object-fit: cover;*/
+    height: auto;
+    object-fit: contain;
 }
 
 .btn-slider {
