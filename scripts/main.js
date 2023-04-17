@@ -53,7 +53,7 @@ if (hamburger) {
             nav.classList.replace('' +
                 'd-none', 'flex-column');
             hamburgerImg.classList.replace('hamburgerHam', 'hamburgerX')
-            hamburgerImg.innerHTML = 'X'
+            hamburgerImg.innerHTML = 'x'
         }
     })
 }
