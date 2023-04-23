@@ -174,10 +174,10 @@ function isModal() {
     if (modal) {
         if (!modal.classList.contains('md-show')) {
             console.log('if');
-            setTimeout(autoNextSlide, 3000)
+            setTimeout(autoNextSlide, 6000)
         }
     } else if (!modal) {
-        setTimeout(autoNextSlide, 3000)
+        setTimeout(autoNextSlide, 6000)
     }
 }
 
