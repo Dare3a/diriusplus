@@ -88,7 +88,7 @@ slidesModal.forEach((slide, indx) => {
 });
 
 // select next slide button
-const nextSlide = document.querySelectorAll(".btn-next, .btn-next-artikli, .btn-next-md");
+const nextSlideBtn = document.querySelectorAll(".btn-next, .btn-next-artikli, .btn-next-md");
 
 // current slide counter
 let curSlide = 0;
@@ -127,34 +127,38 @@ function changeMaxSlides() {
 }
 
 // add event listener and navigation functionality
-nextSlide.forEach(button => {
+nextSlideBtn.forEach(button => {
     button.addEventListener("click", function () {
-        // check if current slide is the last and reset current slide
-        if (curSlide === maxSlide) {
-            console.log('curSlide 0')
-            curSlide = 0;
-        } else {
-            curSlide++;
-        }
-        if (curSlideModal === maxSlideModal) {
-            curSlideModal = 0;
-        } else if (button.classList.contains('btn-next-md')) {
-            curSlideModal++;
-        }
-
-        //   move slide by -100%
-        slides.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-        slidesModal.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
-        });
+        nextSlide(button)
     });
 })
 
+const nextSlide = (element) => {
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+        console.log('curSlide 0')
+        curSlide = 0;
+    } else {
+        curSlide++;
+    }
+    if (curSlideModal === maxSlideModal) {
+        curSlideModal = 0;
+    } else if (element.classList.contains('btn-next-md')) {
+        curSlideModal++;
+    }
+
+    //   move slide by -100%
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+    slidesModal.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+    });
+}
+
 //Auto slide slider
 function autoNextSlide() {
-    nextSlide.forEach(slide => {
+    nextSlideBtn.forEach(slide => {
         if (slide.classList.contains('btn-next-artikli')) {
             slide.click()
         }
@@ -180,49 +184,58 @@ function isModal() {
 isModal();
 
 // select next slide button
-const prevSlide = document.querySelectorAll(".btn-prev, .btn-prev-artikli, .btn-prev-md");
+const prevSlideBtn = document.querySelectorAll(".btn-prev, .btn-prev-artikli, .btn-prev-md");
 
 // add event listener and navigation functionality
-prevSlide.forEach(button => {
+prevSlideBtn.forEach(button => {
     button.addEventListener("click", function () {
-        // check if current slide is the first and reset current slide to last
-        if (curSlide === 0) {
-            curSlide = maxSlide;
-        }
-        if (curSlideModal === 0) {
-            curSlideModal = maxSlideModal;
-        } else {
-            curSlide--;
-            curSlideModal--;
-        }
-
-        //   move slide by 100%
-        slides.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-        slidesModal.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
-        });
+        prevSlide()
     });
 })
 
-// OTVARANJE MODALA
-if (slides.length > 0) {
-    if (slides[0].classList.contains('slide-artikli')) {
-        const slidesArray = Array.prototype.slice.call(slides)
-        slides.forEach(slide => {
-            slide.addEventListener('click', () => {
+const prevSlide = () => {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide === 0) {
+        curSlide = maxSlide;
+    }
+    if (curSlideModal === 0) {
+        curSlideModal = maxSlideModal;
+    } else {
+        curSlide--;
+        curSlideModal--;
+    }
 
-                modal.classList.add('md-show')
-                curSlideModal = slidesArray.indexOf(slide)
-                slidesModal.forEach((slide, indx) => {
-                    slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
-                });
-                isModal()
+    //   move slide by 100%
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+    slidesModal.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+    });
+};
+
+// OTVARANJE MODALA
+const otvaranjeModala = () => {
+    if (slides.length > 0) {
+        if (slides[0].classList.contains('slide-artikli')) {
+            const slidesArray = Array.prototype.slice.call(slides)
+            slides.forEach(slide => {
+                slide.addEventListener('click', () => {
+
+                    modal.classList.add('md-show')
+                    curSlideModal = slidesArray.indexOf(slide)
+                    slidesModal.forEach((slide, indx) => {
+                        slide.style.transform = `translateX(${100 * (indx - curSlideModal)}%)`;
+                    });
+                    isModal()
+                })
             })
-        })
+        }
     }
 }
+
+otvaranjeModala()
+
 
 // ZATVARANJE MODALA
 const modalCloseBtn = document.querySelector('.close-btn-md');
@@ -251,3 +264,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // });
 
 });
+
+// MOBILE SLIDER SWIPE
+document.addEventListener('DOMContentLoaded', () => {
+    const artikliSlider = document.querySelector('.slider-artikli');
+    if (artikliSlider) {
+        // touchstart
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        artikliSlider.addEventListener('touchstart', (evt) => {
+            touchstartX = evt.changedTouches[0].screenX;
+            console.log(touchstartX);
+        })
+        // touchend
+        artikliSlider.addEventListener('touchend', (evt) => {
+            touchendX = evt.changedTouches[0].screenX;
+
+            console.log(touchendX);
+            changeSwapDirection();
+        })
+
+
+        const changeSwapDirection = () => {
+            if (touchstartX < touchendX) {
+                console.log('desno')
+                console.log(nextSlideBtn)
+                nextSlide(nextSlideBtn[1])
+            } else if (touchstartX > touchendX) {
+                console.log('levo');
+                prevSlide()
+            } else {
+                console.log('sredina')
+            }
+        }
+    }
+})

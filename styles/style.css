@@ -6191,6 +6191,10 @@ label {
         top: 0;
         right: 0;
     }
+
+    .slider-artikli {
+        touch-action: none;
+    }
 }
 
 /*.scroll-top {*/
@@ -6218,6 +6222,7 @@ label {
     line-height: 26px;
     color: black;
 }
+
 ul {
     padding-left: 20px;
 }
