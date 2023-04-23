@@ -280,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // touchend
         artikliSlider.addEventListener('touchend', (evt) => {
             touchendX = evt.changedTouches[0].screenX;
-
             console.log(touchendX);
             changeSwapDirection();
         })
@@ -288,14 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const changeSwapDirection = () => {
             if (touchstartX < touchendX) {
-                console.log('desno')
-                console.log(nextSlideBtn)
-                nextSlide(nextSlideBtn[1])
-            } else if (touchstartX > touchendX) {
-                console.log('levo');
                 prevSlide()
+            } else if (touchstartX > touchendX) {
+                nextSlide(nextSlideBtn[1])
             } else {
-                console.log('sredina')
             }
         }
     }
