@@ -5807,12 +5807,12 @@ footer .btn:hover, footer .btn:focus, footer .btn.active {
 .send-button .send-dugme {
     border-radius: 15px;
     color: white;
-    background-color: #328D87;
+    background-color: #37646D;
     /*border: #fed9b7 1px solid !important;*/
 }
 
 .send-button .send-dugme:hover {
-    background-color: #55B68B;
+    background-color: #328D87;
 }
 
 .send-button .form-control:focus {
