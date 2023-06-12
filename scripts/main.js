@@ -15,7 +15,6 @@
 const toastMsg = document.querySelector('.toast')
 
 function toast() {
-    console.log('pokrenut toast')
     toastMsg.classList.replace('hide', 'show')
     setTimeout(() => {
         toastMsg.classList.replace('show', 'hide')
@@ -43,7 +42,6 @@ const hamburgerImg = document.querySelector('#hamburgerImg');
 const hamburger = document.querySelector('#hamburger');
 const nav = document.querySelector('#nav');
 if (hamburger) {
-    console.log(hamburgerImg);
     hamburger.addEventListener('click', () => {
         if (nav.classList.contains('flex-column')) {
             nav.classList.replace('flex-column', 'd-none')
@@ -104,7 +102,6 @@ changeMaxSlides();
 // Ako se u slideru prikazuje jedna slika, ovde staviti length -1, ako se prikazuje vise slika, staviti - broj slika koji se prikazuje
 function changeMaxSlides() {
     if (slides.length > 0) {
-        console.log('usao u changeMaxSlides');
         if (window.innerWidth > 768 && slides[0].classList.contains('slide')) {
             maxSlide = slides.length - 4;
         }
@@ -136,7 +133,6 @@ nextSlideBtn.forEach(button => {
 const nextSlide = (element) => {
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
-        console.log('curSlide 0')
         curSlide = 0;
     } else {
         curSlide++;
@@ -173,7 +169,6 @@ function autoNextSlide() {
 function isModal() {
     if (modal) {
         if (!modal.classList.contains('md-show')) {
-            console.log('if');
             setTimeout(autoNextSlide, 6000)
         }
     } else if (!modal) {
@@ -267,31 +262,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // MOBILE SLIDER SWIPE
 document.addEventListener('DOMContentLoaded', () => {
-    const artikliSlider = document.querySelector('.slider-artikli');
-    if (artikliSlider) {
-        // touchstart
-        let touchstartX = 0;
-        let touchendX = 0;
+    const artikliSlider = document.querySelectorAll('.slider-artikli, .slider-md');
+    artikliSlider.forEach(slider => {
+        if (slider) {
+            // touchstart
+            let touchstartX = 0;
+            let touchendX = 0;
 
-        artikliSlider.addEventListener('touchstart', (evt) => {
-            touchstartX = evt.changedTouches[0].screenX;
-            console.log(touchstartX);
-        })
-        // touchend
-        artikliSlider.addEventListener('touchend', (evt) => {
-            touchendX = evt.changedTouches[0].screenX;
-            console.log(touchendX);
-            changeSwapDirection();
-        })
+            slider.addEventListener('touchstart', (evt) => {
+                touchstartX = evt.changedTouches[0].screenX;
+            })
+            // touchend
+            slider.addEventListener('touchend', (evt) => {
+                touchendX = evt.changedTouches[0].screenX;
+                changeSwapDirection();
+            })
 
 
-        const changeSwapDirection = () => {
-            if (touchstartX < touchendX) {
-                prevSlide()
-            } else if (touchstartX > touchendX) {
-                nextSlide(nextSlideBtn[1])
-            } else {
+            const changeSwapDirection = () => {
+                if (touchstartX < touchendX) {
+                    prevSlide()
+                } else if (touchstartX > touchendX) {
+                    nextSlide(nextSlideBtn[1])
+                }
             }
         }
-    }
+
+    })
 })
