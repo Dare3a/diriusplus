@@ -5940,6 +5940,10 @@ label {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.ul-lista li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .aktivno > a {
     color: #37646D !important;
 }
