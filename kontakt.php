@@ -14,6 +14,9 @@ if (isset($_POST["submit"])) {
 // More headers
     $headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n";
     $headers .= 'Reply-To: ' . $name . ' <' . $email . '>' . "\r\n";
+    $headers .= 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-Type: text/plain; charset=UTF-8' . "\r\n";
+    $headers .= 'Content-Transfer-Encoding: 8bit' . "\r\n";
     if (mail($to, $subject, $body, $headers)) {
         $result = true;
     }
